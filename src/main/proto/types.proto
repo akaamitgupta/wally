@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_package = "org.greengrapes.proto";
+option java_multiple_files = true;
+
+message WALEntry {
+  uint64   logSequenceNumber = 1;
+  bytes    data = 2;
+  uint32   CRC = 3;
+  optional bool isCheckpoint = 4; // Optional field for checkpointing.
+}
