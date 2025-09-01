@@ -116,11 +116,10 @@ public class WALSegment {
     public void flush(boolean forceSync) {
         lock.lock();
         try {
-            bufferedStream.flush();
-            logicalBufferSize = 0;
+            flushBuffer();
 
             if (forceSync || immediateFsync) {
-                channel.force(true);
+                syncDisk();
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -156,6 +155,17 @@ public class WALSegment {
             }
         } finally {
             lock.unlock();
+        }
+    }
+
+    private void flushBuffer() throws IOException {
+        bufferedStream.flush();
+        logicalBufferSize = 0;
+    }
+
+    private void syncDisk() throws IOException {
+        if (channel.isOpen()) {
+            channel.force(true);
         }
     }
 
