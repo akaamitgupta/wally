@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fee5f35-2689-4c72-b10a-746ab41deedf" name="Changes" comment="Added WAL, WALSegmentReader, and unit test cases">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/greengrapes/WAL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/greengrapes/WALRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/greengrapes/WALSegmentReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/greengrapes/WALUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/greengrapes/WALSegmentReaderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/greengrapes/WALTest.java" afterDir="false" />
+    <list default="true" id="5fee5f35-2689-4c72-b10a-746ab41deedf" name="Changes" comment="Fixed testCloseMultipleTimes test">
+      <change afterPath="$PROJECT_DIR$/CHOICES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMPROVEMENTS.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/greengrapes/WALSegment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/greengrapes/WALSegment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -106,7 +100,7 @@
       <recent name="org.greengrapes" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'wally.test'">
+  <component name="RunManager" selected="Gradle.WALSegmentTest.testWriteAndReadSingleEntry">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="bbPath" value="" />
@@ -157,7 +151,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WALSegmentReaderTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WALSegmentTest.testWriteAndReadSingleEntry" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -170,7 +164,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.greengrapes.WALSegmentReaderTest&quot;" />
+            <option value="&quot;org.greengrapes.WALSegmentTest.testWriteAndReadSingleEntry&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,7 +174,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WALTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WALTest.testCloseMultipleTimes" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -193,7 +187,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.greengrapes.WALTest&quot;" />
+            <option value="&quot;org.greengrapes.WALTest.testCloseMultipleTimes&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -203,7 +197,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WALTest.testConcurrentWritesWithRotation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WALTest.testWriteAndReadSingleEntry" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -216,7 +210,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.greengrapes.WALTest.testConcurrentWritesWithRotation&quot;" />
+            <option value="&quot;org.greengrapes.WALTest.testWriteAndReadSingleEntry&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -226,7 +220,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WALTest.testConcurrentWritesWithRotationAndDeletion" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WALTest.testWriteMultipleEntriesAndRead" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -239,7 +233,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.greengrapes.WALTest.testConcurrentWritesWithRotationAndDeletion&quot;" />
+            <option value="&quot;org.greengrapes.WALTest.testWriteMultipleEntriesAndRead&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -260,11 +254,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.WALSegmentTest.testWriteAndReadSingleEntry" />
+        <item itemvalue="Gradle.WALTest.testCloseMultipleTimes" />
         <item itemvalue="Gradle.Tests in 'wally.test'" />
-        <item itemvalue="Gradle.WALTest.testConcurrentWritesWithRotationAndDeletion" />
-        <item itemvalue="Gradle.WALTest.testConcurrentWritesWithRotation" />
-        <item itemvalue="Gradle.WALSegmentReaderTest" />
-        <item itemvalue="Gradle.WALTest" />
+        <item itemvalue="Gradle.WALTest.testWriteMultipleEntriesAndRead" />
+        <item itemvalue="Gradle.WALTest.testWriteAndReadSingleEntry" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +294,21 @@
       <option name="project" value="LOCAL" />
       <updated>1756577221155</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added WAL, WALSegmentReader, and unit test cases">
+      <created>1756747415064</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756747415064</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed testCloseMultipleTimes test">
+      <created>1756749347298</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756749347298</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +319,8 @@
     <MESSAGE value="Added protobuf and proto file for WALEntry" />
     <MESSAGE value="Added WALSegment" />
     <MESSAGE value="Added WAL, WALSegmentReader, and unit test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added WAL, WALSegmentReader, and unit test cases" />
+    <MESSAGE value="Fixed testCloseMultipleTimes test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed testCloseMultipleTimes test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -338,8 +347,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/greengrapes/WALTest.java</url>
-          <line>141</line>
+          <line>146</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/greengrapes/WALSegmentTest.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/greengrapes/WALSegmentReader.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/greengrapes/WALSegment.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
